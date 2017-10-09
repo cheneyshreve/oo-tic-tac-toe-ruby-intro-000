@@ -131,7 +131,8 @@ def winner(board = @board)
 end
 
 def play(board = @board)
-until over?(board) == true
+
+  until over?(board) == true
     turn(board)
   end
   game_won = won?(board)
