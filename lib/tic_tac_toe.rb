@@ -104,7 +104,6 @@ elsif won?(board) == false && full?(board) != true #in progress
 elsif won?(board) == true #won board
   return false
 end
-
 end
 
 def over?
