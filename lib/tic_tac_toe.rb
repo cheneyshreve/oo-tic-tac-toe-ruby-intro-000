@@ -26,14 +26,14 @@ end
 
 def input_to_index(input)
  unless input =~ /\d/
-   index = -1
+   @index = -1
  end
   input = input.to_i
   until input.between?(1,9)
     turn(board)
     input = input.to_i
   end
-    index = input - 1
+    @index = input - 1
 end
 
 def move(index = @index, token = @token || @token="X")
