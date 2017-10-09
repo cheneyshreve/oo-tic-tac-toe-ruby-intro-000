@@ -88,8 +88,12 @@ def won?(board = @board)
 end
 
 
-def full?
-
+def full?(board = @board)
+ if @board.all?{|letters| letters == "X" || letters == "O"}
+   return true
+ else
+   return false
+ end
 end
 
 def draw?
