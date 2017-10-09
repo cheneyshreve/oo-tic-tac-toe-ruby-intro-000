@@ -24,7 +24,7 @@ def display_board(board = @board)
 end
 
 
-def input_to_index(input)
+def input_to_index(input, board = @board)
  unless input =~ /\d/
    @index = -1
  end
