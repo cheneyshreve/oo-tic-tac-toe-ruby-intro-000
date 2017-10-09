@@ -30,7 +30,7 @@ def input_to_index(input)
  end
   input = input.to_i
   until input.between?(1,9)
-    turn(@board)
+    turn(board)
     input = input.to_i
   end
     index = input - 1
