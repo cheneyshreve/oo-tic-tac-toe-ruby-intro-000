@@ -61,7 +61,7 @@ def current_player(board = @board)
 end
 
 #left off here...need to fix #turn
-def turn(board = @board)
+def turn(board)
   puts "Please enter 1-9:"
   input = gets.strip
   index = input_to_index(input)
