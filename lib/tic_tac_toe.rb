@@ -99,7 +99,7 @@ end
 def draw?(board = @board)
 if won?(board) != true || full?(board) == true #full board, draw
   return true
-elsif won?(board) == false && full?(board) != true #in progress
+elsif won?(board) != true && full?(board) != true #in progress
   return false
 elsif won?(board) == true #won board
   return false
@@ -131,7 +131,6 @@ def winner(board = @board)
 end
 
 def play(board = @board)
-
   until over?(board) == true
     turn(board)
   end
