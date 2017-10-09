@@ -131,7 +131,19 @@ def winner(board = @board)
 end
 
 def play(board = @board)
-
+until over?(board) == true
+    turn(board)
+  end
+  game_won = won?(board)
+  game_draw = draw?(board)
+  if game_won != nil
+    puts "Congratulations #{winner(board)}!"
+    return
+  end
+  if game_draw != false
+    puts "Cat's Game!"
+    return
+  end
 end
 
 end
