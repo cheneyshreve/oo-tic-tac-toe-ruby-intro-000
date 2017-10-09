@@ -96,7 +96,14 @@ def full?(board = @board)
  end
 end
 
-def draw?
+def draw?(board = @board)
+if won?(board) != true || full?(board) == true #full board, draw
+  return true
+elsif won?(board) == false && full?(board) != true #in progress
+  return false
+elsif won?(board) == true #won board
+  return false
+end
 
 end
 
