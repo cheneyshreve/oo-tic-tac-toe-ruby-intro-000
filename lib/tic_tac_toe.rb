@@ -115,7 +115,19 @@ def over?(board = @board)
 end
 
 def winner(board = @board)
-
+ array_index = won?(board)
+ if array_index == nil
+   return nil
+ end
+ letters = []
+ array_index.each{|index| letters << board[index] }
+ if letters.all?{|letter| letter == "X"}
+   return "X"
+ elsif letters.all?{|letter| letter == "O"}
+   return "O"
+ else
+   return nil
+ end
 end
 
 def play(board = @board)
