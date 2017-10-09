@@ -97,11 +97,12 @@ def full?(board = @board)
 end
 
 def draw?(board = @board)
-if won?(board) != true || full?(board) == true #full board, draw
+status = won?(board)
+if status == false || status == nil && full?(board) == true
   return true
-elsif won?(board) != true && full?(board) != true #in progress
+elsif status == false && full?(board) != true
   return false
-elsif won?(board) == true #won board
+elsif status == true
   return false
 end
 end
