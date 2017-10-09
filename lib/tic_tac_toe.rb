@@ -24,13 +24,13 @@ def display_board(board = @board)
 end
 
 
-def input_to_index(input, board = @board)
+def input_to_index(input)
  unless input =~ /\d/
    index = -1
  end
   input = input.to_i
   until input.between?(1,9)
-    turn(board)
+    turn(@board)
     input = input.to_i
   end
     index = input - 1
