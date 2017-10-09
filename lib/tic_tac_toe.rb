@@ -87,7 +87,6 @@ def won?(board = @board)
  return nil
 end
 
-end
 
 def full?
 
