@@ -74,7 +74,18 @@ def turn(board = @board)
   end
 end
 
-def won?
+def won?(board = @board)
+  WIN_COMBINATIONS.each do |win_index|
+    board_subarray = []
+     win_index.each do |position|
+       board_subarray << board[position]
+     end
+   if board_subarray.all?{|letters| letters == "X"} || board_subarray.all?{|letters| letters == "O"}
+     return win_index
+   end
+  end
+ return nil
+end
 
 end
 
