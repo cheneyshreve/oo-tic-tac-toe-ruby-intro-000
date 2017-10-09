@@ -69,7 +69,7 @@ def turn(board = @board)
   if test_valid != true
     puts "Please enter 1-9:"
     input = gets.strip
-  else
+  end
     move(index,current_player)
     display_board(board)
   end
