@@ -74,6 +74,28 @@ def turn(board = @board)
   end
 end
 
+def won?
 
+end
+
+def full?
+
+end
+
+def draw?
+
+end
+
+def over?
+
+end
+
+def winner(board = @board)
+
+end
+
+def play(board = @board)
+
+end
 
 end
