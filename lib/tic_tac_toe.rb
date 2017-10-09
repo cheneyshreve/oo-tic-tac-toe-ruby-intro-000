@@ -106,8 +106,12 @@ elsif won?(board) == true #won board
 end
 end
 
-def over?
-
+def over?(board = @board)
+  if won?(board) || draw?(board)   #game is won or it's a draw or board is full
+    return true
+  else # game is not won and board is not full
+    return false
+  end
 end
 
 def winner(board = @board)
